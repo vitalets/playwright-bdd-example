@@ -28,6 +28,11 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
    ```
    npm test
    ```
+   Output:
+   ```
+   Running 2 tests using 1 worker
+   2 passed (2.3s)
+   ```
 
 5. Check out the report
    ```
