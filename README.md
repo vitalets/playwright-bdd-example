@@ -40,5 +40,5 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
    ```
    <details>
      <summary>Report</summary>
-     <img width="80%" src="https://github.com/vitalets/playwright-bdd/assets/1473072/4e2e4803-118a-40bd-a583-7dbe93b9ffd2"/>
+     <img src="https://github.com/vitalets/playwright-bdd/assets/1473072/4e2e4803-118a-40bd-a583-7dbe93b9ffd2"/>
    </details>
