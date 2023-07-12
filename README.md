@@ -36,7 +36,7 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
 
 5. Check out the report
    ```
-   npx playwright show-report
+   npm run report
    ```
    <details>
      <summary>Report</summary>
