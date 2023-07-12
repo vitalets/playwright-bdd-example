@@ -6,25 +6,34 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
 
 1. Clone repo
    ```
-   git clone 
+   git clone https://github.com/vitalets/playwright-bdd-example.git
    ```
 
-2. Install dependencies:
+2. CD into directory
+   ```
+   cd playwright-bdd-example
+   ```
+
+2. Install dependencies
    ```
    npm install
    ```
 
-3. Install browsers:
+3. Install browsers
    ```
    npx playwright install
    ```
 
-4. Run tests:
+4. Run tests
    ```
    npm test
    ```
 
-5. Check the report:
+5. Check out the report
    ```
    npx playwright show-report
-   ```   
+   ```
+   <details>
+     <summary>Report</summary>
+     <img width="80%" src="https://github.com/vitalets/playwright-bdd/assets/1473072/4e2e4803-118a-40bd-a583-7dbe93b9ffd2"/>
+   </details>
