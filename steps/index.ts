@@ -4,12 +4,12 @@ import { test } from './fixtures';
 
 const { Given, When, Then } = createBdd(test);
 
-Given('I am on home page', async ({ homePage }) => {
-  await homePage.open();
+Given('I am on home page', async ({ page }) => {
+  await page.goto('https://playwright.dev');
 });
 
-When('I click link {string}', async ({ homePage }, name: string) => {
-  await homePage.clickLink(name);
+When('I click link {string}', async ({ page }, name: string) => {
+  await page.getByRole('link', { name }).click();
 });
 
 Then('I see in title {string}', async ({ page }, text: string) => {
