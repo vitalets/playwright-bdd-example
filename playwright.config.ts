@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
+import path from "path";
+export const STORAGE_STATE = path.join(__dirname, ".auth/user.json");
 
 export default defineConfig({
   reporter: 'html',
