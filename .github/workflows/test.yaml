@@ -14,3 +14,11 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps
       - run: npm test
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-artifacts
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 10
