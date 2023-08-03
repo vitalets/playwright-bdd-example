@@ -24,22 +24,17 @@ class TodoPage {
     await this.inputBox.press('Enter');
   }
 
-  @When('I remove todo {string}')
-  async removeTodo(hasText: string) {
-    const todo = this.todoItems.filter({ hasText });
-    await todo.hover();
-    await todo.getByRole('button', { name: 'Delete' }).click();
-  }
-
-  @When('I toggle todo {string}')
-  async toggleTodo(hasText: string) {
-    const todo = this.todoItems.filter({ hasText });
-    await todo.getByRole('checkbox').click();
+  @When('I complete todo {string}')
+  async completeTodo(hasText: string) {
+    const checkbox = this.todoItems.filter({ hasText }).getByRole('checkbox');
+    if (!await checkbox.isChecked()) {
+      await checkbox.click();
+    }
   }
 
   @When(/I filter todos as "(All|Completed)"/)
   async filterTodos(name: 'All' | 'Completed') {
-    this.page.getByRole('link', { name }).click();
+    await this.page.getByRole('link', { name }).click();
   }
 
   @Then('visible todos count is {int}')
