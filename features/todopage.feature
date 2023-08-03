@@ -5,6 +5,7 @@ Feature: Todo Page
 
     Scenario: Empty list
       Then visible todos count is 0
+      And page screenshot matches previous one
 
     Scenario: Add todos
       When I add todo "foo"
