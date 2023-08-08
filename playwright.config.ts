@@ -2,10 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
-  importTestFrom: 'steps/fixtures.ts',
-  paths: ['features'],
+  paths: ['features/**/*.{feature,feature.md}'],
   require: ['steps/*.ts'],
-  quotes: 'backtick',
+  importTestFrom: 'steps/fixtures.ts',
 });
 
 export default defineConfig({
@@ -13,7 +12,6 @@ export default defineConfig({
   reporter: 'html',
   use: {
     screenshot: 'only-on-failure',
-    baseURL: 'http://localhost:3000',
   },
   projects: [
     {
