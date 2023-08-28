@@ -3,6 +3,7 @@
     "target": "es2021",
     "module": "commonjs",
     "strict": true,
+    "noEmit": true,
     "useUnknownInCatchVariables": false,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
