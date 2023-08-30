@@ -9,6 +9,7 @@ Feature: Playwright Home Page
         When I click link "<link>"
         Then I see in title "<title>"
 
+    @foo
     Examples:
         | link          | title        |
         | Get started   | Installation |    
