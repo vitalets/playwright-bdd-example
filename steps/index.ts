@@ -4,7 +4,7 @@ import { test } from './fixtures';
 
 const { Given, When, Then } = createBdd(test);
 
-Given('I am on home page', async ({ page }) => {
+Given('I am on Playwright home page', async ({ page }) => {
   await page.goto('https://playwright.dev');
 });
 
