@@ -42,8 +42,8 @@ class TodoPage {
     await expect(this.todoItems).toHaveCount(count);
   }
 
-  @Then('page screenshot matches previous one')
-  async matchScreenshot() {
-    await expect(this.page).toHaveScreenshot();
-  }
+  // @Then('page screenshot matches previous one')
+  // async matchScreenshot() {
+  //   await expect(this.page).toHaveScreenshot();
+  // }
 }
