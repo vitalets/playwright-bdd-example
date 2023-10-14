@@ -4,7 +4,7 @@ Feature: feature
     Background:
       Given step from modelCenter
 
-    Scenario: scenario
+    Scenario: Open Build Modal in Model Center (Blank)
       And step from modelBuildModal
 
 
