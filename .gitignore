@@ -10,3 +10,5 @@ npm-debug.log
 test-results
 playwright-report
 **/.features-gen/**/*.spec.js
+
+.nx/cache
