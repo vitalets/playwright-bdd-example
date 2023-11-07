@@ -1,5 +1,19 @@
 {
-  "targetDefaults": {},
+  "targetDefaults": {
+    "bddgen": {
+      "command": "bddgen",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "dependsOn": ["bddgen"],
+      "options": {
+        "config": "{projectRoot}"
+      }
+    }
+  },
   "affected": {
     "defaultBase": "main"
   }
