@@ -4,6 +4,7 @@ Feature: Todo Page
     Background:
       Given I am on todo page
 
+    @slow
     Scenario: Empty list
       Then visible todos count is 0
       And page screenshot matches previous one
