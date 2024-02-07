@@ -12,3 +12,4 @@ playwright-report
 **/.features-gen/**/*.spec.js
 
 .nx/cache
+.env
