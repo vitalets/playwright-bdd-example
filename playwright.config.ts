@@ -13,17 +13,7 @@ export default defineConfig({
   testDir,
   reporter: 'html',
   use: {
+    baseURL: 'http://httpbin.org',
     screenshot: 'only-on-failure',
-    baseURL: 'http://localhost:3000',
   },
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-  ]
 });
