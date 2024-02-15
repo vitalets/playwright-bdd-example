@@ -12,6 +12,7 @@ npm-debug.log
 # tests
 test-results
 playwright-report
+cucumber-report
 **/.features-gen/**/*.spec.js
 
 .nx/cache
