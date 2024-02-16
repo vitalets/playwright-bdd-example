@@ -1,5 +1,5 @@
 import { test as base } from 'playwright-bdd';
-import { TodoPage } from './TodoPage';
+import { TodoPage } from './TodoPage.js';
 
 export const test = base.extend<{ todoPage: TodoPage, browserSpecificTest: void, slowTest: void }>({
   todoPage: async ({ page }, use) => use(new TodoPage(page)),
