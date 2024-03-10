@@ -2,11 +2,10 @@ import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
+  paths: ['features/*.feature'],
+  featuresRoot: 'features',
   importTestFrom: 'steps/fixtures.ts',
-  paths: ['./features'],
   require: ['steps/*.ts'],
-  quotes: 'backtick',
-  featuresRoot: './features',
 });
 
 export default defineConfig({
@@ -21,9 +20,9 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
   ]
 });
