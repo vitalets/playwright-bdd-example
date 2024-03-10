@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig } from 'playwright-bdd';
+import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
   paths: ['features/*.feature'],
@@ -10,7 +10,7 @@ const testDir = defineBddConfig({
 
 export default defineConfig({
   testDir,
-  reporter: 'html',
+  reporter: [cucumberReporter('html', { outputFile: 'reports/report.html' })],
   use: {
     screenshot: 'only-on-failure',
     baseURL: 'http://localhost:3000',
