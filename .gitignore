@@ -13,7 +13,6 @@ npm-debug.log
 test-results
 playwright-report
 cucumber-report
-reports
 **/.features-gen/**/*.spec.js
 
 .nx

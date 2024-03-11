@@ -3,18 +3,13 @@ import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
   paths: ['features/*.feature'],
-  featuresRoot: 'features',
-  importTestFrom: 'steps/fixtures.ts',
   require: ['steps/*.ts'],
+  importTestFrom: 'steps/fixtures.ts',
 });
 
 export default defineConfig({
   testDir,
-  reporter: [cucumberReporter('html', { outputFile: 'reports/report.html' })],
-  use: {
-    screenshot: 'only-on-failure',
-    baseURL: 'http://localhost:3000',
-  },
+  reporter: [cucumberReporter('html', { outputFile: 'cucumber-report/report.html' })],
   projects: [
     {
       name: 'chromium',
