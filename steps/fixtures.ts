@@ -1,5 +1,6 @@
 import { test as base } from 'playwright-bdd';
+import { PlaywrightPage } from './PlaywrightPage';
 
 export const test = base.extend({
-  // add your fixtures here
+  playwrightPage: ({ page }, use) => use(new PlaywrightPage(page)),
 });
