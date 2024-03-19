@@ -1,6 +1,6 @@
 import { Page, expect } from '@playwright/test';
 import { Fixture, Given, When } from 'playwright-bdd/decorators';
-import type { test } from './fixtures';
+import { test } from './fixtures';
 
 export
 @Fixture<typeof test>('playwrightPage')
@@ -9,7 +9,9 @@ class PlaywrightPage {
 
   @Given('I am on Playwright home page')
   async open() {
+    test.setTimeout(10 * 1000);
     await this.page.goto('https://playwright.dev');
+    await this.page.waitForTimeout(2000);
   }
 
   @When('I click link {string}')
