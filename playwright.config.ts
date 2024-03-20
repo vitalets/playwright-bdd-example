@@ -9,7 +9,7 @@ const testDir = defineBddConfig({
 
 export default defineConfig({
   testDir,
-  reporter: [cucumberReporter('html', { outputFile: 'cucumber-report/report.html' })],
+  reporter: [['html'], cucumberReporter('html', { outputFile: 'cucumber-report/report.html' })],
   projects: [
     {
       name: 'chromium',
