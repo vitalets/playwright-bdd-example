@@ -1,7 +1,7 @@
-Feature: Playwright Home Page
+Feature: Visual Testing of Cart Page
 
-    Scenario: Check title
-        Given I am on Playwright home page
-        When I click link "Get started"
-        Then I see in title "Installation"
+  Scenario: Create a base screenshot
+    Given I open url "https://flipkart.com"
+    When I click on cart link
+    Then Screenshot should get captured
   
