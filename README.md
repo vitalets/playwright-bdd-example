@@ -5,12 +5,12 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
 ## How to run it locally / How to report a bug
 
 1. [Fork](https://github.com/vitalets/playwright-bdd-example/fork) the repo
-2. Clone it to your local machine:
+2. Clone it to your local machine
    ```
    git clone https://github.com/<%your github username%>/playwright-bdd-example.git
    ```
 
-2. Change directory to `playwright-bdd-example`:
+2. Change directory to `playwright-bdd-example`
    ```
    cd playwright-bdd-example
    ```
@@ -37,10 +37,10 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
 
 6. Make changes reproducing a bug
 
-7. Commit and push changes: 
+7. Commit and push changes
    ```
    git add .
    git commit -m'repro for playwright-bdd issue xxx'
    git push
    ```
-8. [Open a pull-request](https://github.com/vitalets/playwright-bdd-example/pulls) and share the link in the issue   
+8. [Open a pull-request](https://github.com/vitalets/playwright-bdd-example/pulls) and share the link
