@@ -1,6 +1,5 @@
 Feature: Playwright Home Page
 
-    @firefox
     Scenario: Check title
         Given I am on Playwright home page
         Then I see in title "Playwright"
@@ -13,4 +12,4 @@ Feature: Playwright Home Page
     Examples:
         | link          | title        |
         | Get started   | Installation |    
-        | API reference | Library      |    
+        | API           | Library      |    

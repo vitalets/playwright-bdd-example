@@ -14,16 +14,11 @@ export default defineConfig({
   reporter: 'html',
   use: {
     screenshot: 'only-on-failure',
-    baseURL: 'http://localhost:3000',
   },
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
     },
   ]
 });

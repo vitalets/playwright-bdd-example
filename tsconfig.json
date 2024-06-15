@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "target": "es2021",
-    "module": "ESNext",
+    "module": "nodenext",
     "strict": true,
     "noEmit": true,
     "useUnknownInCatchVariables": false,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true
   },

@@ -13,6 +13,7 @@ npm-debug.log
 test-results
 playwright-report
 **/.features-gen/**/*.spec.js
+/cucumber-report
 
 .nx/cache
 /update.sh
