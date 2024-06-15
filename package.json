@@ -8,7 +8,7 @@
     "watch": "run-p watch:*"
   },
   "devDependencies": {
-    "@playwright/test": "1.42.1",
+    "@playwright/test": "1.44.1",
     "@types/node": "^20.9.4",
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
