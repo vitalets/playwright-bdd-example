@@ -4,8 +4,9 @@ import { test } from './fixtures';
 
 const { Given, When, Then } = createBdd(test);
 
-Given('I am on Playwright home page', async ({ page }) => {
+Given('I am on Playwright home page', async ({ page, myFixture }) => {
   await page.goto('https://playwright.dev');
+  await myFixture.page.goto('https://playwright.dev');
 });
 
 When('I click link {string}', async ({ page }, name: string) => {
