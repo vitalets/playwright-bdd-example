@@ -15,10 +15,8 @@ export class HomePage extends BasePage {
     await this.page.goto(`/`);
   }
 
-  async assertOpened() {
-    await expect (this.page).toHaveURL(`https://authenticationtest.com/loginSuccess/`);
-    await expect (this.successMessage).toBeVisible()
+  async assertAuthorized() {
+    await expect (this.page.getByRole('navigation')).toContainText('Sign Out')
   }
-
 }
 

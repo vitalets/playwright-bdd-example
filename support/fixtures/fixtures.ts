@@ -2,31 +2,33 @@ import { test as base } from 'playwright-bdd';
 import { Browser, BrowserContext, Page, request } from '@playwright/test';
 import * as Pages from './pages';
 
-type AuthFixture = { context: BrowserContext, userName: string };
+type AuthFixture = { context: BrowserContext, page: Page, userName: string };
 
 type MyTestFixtures = {
   loginPage: Pages.LoginPage;
-  homePage: Pages.HomePage;
   auth: AuthFixture;
-  //authPage: Page;
+  pages: { 
+    homePage: Pages.HomePage; 
+  };
   //workerStorageState: string;
 };
 
-const createTestFunction =
-  <T extends new (page: Page) => InstanceType<T>>(PageClass: T) =>
-  async (
-    fixtures: { page: Page },
-    use: (fixture: InstanceType<T>) => Promise<void>
-  ) =>
-    use(new PageClass(fixtures.page));
+// const createTestFunction =
+//   <T extends new (page: Page) => InstanceType<T>>(PageClass: T) =>
+//   async (
+//     fixtures: { page: Page },
+//     use: (fixture: InstanceType<T>) => Promise<void>
+//   ) =>
+//     use(new PageClass(fixtures.page));
 
-    export const test = base.extend<MyTestFixtures>({
-      loginPage: async ({ page }, use) => await createTestFunction(Pages.LoginPage)({ page }, use),
-      homePage: async ({ page }, use) => await createTestFunction(Pages.HomePage)({ page }, use),
-      auth: async ({ page }, use) => {
-        const auth = {} as AuthFixture;
-        auth.context = await page.context(); // Initialize auth.context
-        await use(auth);
-        await auth.context?.close();
-      },
+export const test = base.extend<MyTestFixtures>({
+  auth: async ({}, use) => {
+    const auth = {} as AuthFixture; // <- will be initialized in steps
+    await use(auth);
+    await auth.context?.close();
+  },
+  pages: async ({}, use) => {
+    const pages = {} as MyTestFixtures['pages']; // <- will be initialized in steps
+    await use(pages);
+  },
 }); 
