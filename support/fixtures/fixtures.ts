@@ -9,6 +9,8 @@ type MyTestFixtures = {
   auth: AuthFixture;
   pages: { 
     homePage: Pages.HomePage; 
+    aboutPage: Pages.AboutPage;
+    loginPage: Pages.LoginPage;
   };
   //workerStorageState: string;
 };

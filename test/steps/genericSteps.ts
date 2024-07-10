@@ -56,10 +56,8 @@ Given('I logged in with {string} credentials', async ({ browser, page, auth, pag
    // }
 });
 
-Then('I see I am on the home page',async ({ pages }) => {
-    await pages.homePage.assertAuthorized();
-})
+Given('I am not logged in', async ({pages}) => {
+    await pages.loginPage.page.context().clearCookies();
+  await pages.loginPage.page.context().clearPermissions();
 
-When('I go to home page', async ({ pages }) => {
-    await pages.homePage.openHomePage();
 })

@@ -6,5 +6,8 @@ Feature: Playwright Home Page
     Scenario: Check title
         When I go to home page
         Then I see I am on the home page
+
+    Scenario: Go to About
+        When I go to About section
  
   
