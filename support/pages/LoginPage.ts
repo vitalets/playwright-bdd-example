@@ -33,4 +33,7 @@ export class LoginPage extends BasePage{
     await this.password.fill(password);
   }
 
+  async assertLoginSuccess() {
+    await expect (this.page).toHaveURL(`https://authenticationtest.com/loginSuccess/`);
+  }
 }

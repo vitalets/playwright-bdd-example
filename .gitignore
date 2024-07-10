@@ -17,3 +17,4 @@ cucumber-report
 
 .nx
 /update.sh
+/playwright/.auth
