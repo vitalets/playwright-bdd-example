@@ -7,6 +7,9 @@ export class AboutPage extends BasePage {
     super(page);
   }
 
+  async open() {
+    await this.page.goto(`/about/`);
+  }
 
   async assertAuthorized() {
     await expect (this.page.getByRole('navigation')).toContainText('Sign Out')

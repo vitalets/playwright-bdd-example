@@ -16,8 +16,7 @@ export class LoginPage extends BasePage{
     }
 
    async openLoginPage() {
-    //await this.page.goto(`${process.env.BASE_URL}`);
-    await this.page.goto(`https://authenticationtest.com/simpleFormAuth/`);
+    await this.page.goto(`/simpleFormAuth/`);
     await expect (this.signInButton).toBeVisible()
   }
 

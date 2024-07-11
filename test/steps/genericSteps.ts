@@ -13,12 +13,14 @@ interface ICredentials {
 }
 
 //Not used anymore
-Given('I logged in with {string} credentials', async ({ browser, page, auth, pages }, authFile: string) => {
+Given('I logged in with {string} credentials', async ({ browser, auth, pages }, authFile: string) => {
     const filePath = path.resolve(__dirname, `../../playwright/.auth/${authFile}.json`);
 
     if (!fs.existsSync(`${filePath}`)) { //If not already authenticated
       console.log('Storage state file does not exist. Proceeding with login.');
       const credential = require(`../../support/credentials/${authFile}.json`) as ICredentials; // load credentials from file
+      const context = await browser.newContext();
+      const page = await context.newPage();
       const loginPage = new Pages.LoginPage(page);
       await loginPage.openLoginPage();
       await loginPage.enterUser(credential.username);
@@ -26,8 +28,9 @@ Given('I logged in with {string} credentials', async ({ browser, page, auth, pag
       await loginPage.clickOnSignIn();
       await loginPage.assertLoginSuccess() //assert login finished
       // Save the storage state to a file
-      await loginPage.page.context().storageState({ path: filePath })  //auth.context.storageState();
+      await context.storageState({ path: filePath })  //auth.context.storageState();
       console.log(`Storage state saved to ${filePath}.`);
+      await context.close();
     } else {
       console.log('Storage state file exists. Loading it into new context.');
     }
@@ -36,6 +39,7 @@ Given('I logged in with {string} credentials', async ({ browser, page, auth, pag
     auth.context = await browser.newContext( { storageState: filePath } );
     auth.page = await auth.context.newPage();
     pages.homePage = new Pages.HomePage(auth.page);
+    pages.aboutPage = new Pages.AboutPage(auth.page);
 
     //    console.log('Storage state file exists. Loading state from it.');
     //    const storedState = JSON.parse(fs.readFileSync(`${filePath}`, 'utf-8'));
