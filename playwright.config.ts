@@ -1,22 +1,24 @@
-import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
+import { defineConfig, devices } from "@playwright/test";
+import { defineBddConfig, cucumberReporter } from "playwright-bdd";
 
 const testDir = defineBddConfig({
-  paths: ['features/*.feature'],
-  importTestFrom: 'steps/fixtures.ts',
+  features: "features/*.feature",
+  steps: "steps/*.ts",
 });
 
 export default defineConfig({
   testDir,
-  reporter: [cucumberReporter('html', { outputFile: 'cucumber-report/report.html' })],
+  reporter: [
+    cucumberReporter("html", { outputFile: "cucumber-report/report.html" }),
+  ],
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
     },
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
     // },
-  ]
+  ],
 });
