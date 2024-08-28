@@ -1,12 +1,7 @@
-import { test as base } from 'playwright-bdd';
-import { TodoPage } from './TodoPage';
+import { test as base, createBdd } from "playwright-bdd";
 
-export const test = base.extend<{ todoPage: TodoPage, browserSpecificTest: void }>({
-  todoPage: async ({ page }, use) => use(new TodoPage(page)),
-  browserSpecificTest: [async ({ $tags }, use, testInfo) => {
-    if ($tags.includes('@firefox') && testInfo.project.name !== 'firefox') {
-      testInfo.skip();
-    }
-    await use();
-  }, { auto: true }],
+export const test = base.extend<{ myFixture: string }>({
+  myFixture: async ({}, use) => use("my custom fixture"),
 });
+
+export const { Given, When, Then } = createBdd(test);

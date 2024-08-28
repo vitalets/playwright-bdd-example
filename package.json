@@ -2,24 +2,19 @@
   "name": "playwright-bdd-example",
   "version": "0.1.0",
   "scripts": {
-    "test": "npx bddgen && npx playwright test",
-    "test:todo": "npx bddgen --tags '@todo' && npx playwright test",
-    "test:chromium": "npx bddgen && npx playwright test --project chromium",
-    "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec 'npx bddgen'",
-    "watch:pw": "playwright test --ui",
-    "watch": "run-p watch:*",
-    "report": "npx playwright show-report",
-    "steps": "npx bddgen export"
+    "e2e:app1": "nx e2e app1",
+    "e2e:app2": "nx e2e app2",
+    "e2e": "nx run-many -t e2e -p app1 app2"
   },
   "devDependencies": {
-    "@nx/devkit": "17.3.1",
-    "@nx/playwright": "17.3.1",
-    "@playwright/test": "^1.36.0",
-    "nodemon": "^3.0.1",
+    "@nx/devkit": "19.6.3",
+    "@nx/playwright": "19.6.3",
+    "@playwright/test": "1.46.1",
+    "nodemon": "3.1.4",
     "npm-run-all": "^4.1.5",
-    "nx": "17.3.1",
-    "playwright-bdd": "^5.4.0",
-    "typescript": "^5.2.2"
+    "nx": "19.6.3",
+    "playwright-bdd": "7.2.2",
+    "typescript": "5.5.4"
   },
   "nx": {
     "targets": {}
