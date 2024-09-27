@@ -10,11 +10,5 @@ export default defineConfig({
   testDir,
   reporter: [
     cucumberReporter("html", { outputFile: "cucumber-report/report.html" }),
-  ],
-  projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
-  ],
+  ]
 });
