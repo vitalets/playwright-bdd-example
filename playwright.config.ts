@@ -9,8 +9,16 @@ const testDir = defineBddConfig({
 export default defineConfig({
   testDir,
   reporter: [
-    cucumberReporter("html", { outputFile: "cucumber-report/report.html" }),
+    cucumberReporter("html", {
+      outputFile: "cucumber-report/index.html",
+      externalAttachments: true,
+      attachmentsBaseURL: "http://127.0.0.1:8080/data",
+    }),
   ],
+  use: {
+    screenshot: "on",
+    trace: "on",
+  },
   projects: [
     {
       name: "chromium",
