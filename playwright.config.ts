@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 import { defineBddConfig, cucumberReporter } from "playwright-bdd";
 
 const testDir = defineBddConfig({
@@ -7,22 +7,14 @@ const testDir = defineBddConfig({
 });
 
 export default defineConfig({
-  testDir,
-  reporter: [
-    cucumberReporter("html", {
-      outputFile: "cucumber-report/index.html",
-      externalAttachments: true,
-      attachmentsBaseURL: "http://127.0.0.1:8080/data",
-    }),
-  ],
-  use: {
-    screenshot: "on",
-    trace: "on",
-  },
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "bdd-project",
+      testDir,
+    },
+    {
+      name: "non-bdd-project",
+      testDir: "non-bdd",
     },
   ],
 });
