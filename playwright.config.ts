@@ -14,6 +14,7 @@ export default defineConfig({
       externalAttachments: true,
       attachmentsBaseURL: "http://127.0.0.1:8080/data",
     }),
+    ["html", { open: "never" }],
   ],
   use: {
     screenshot: "on",
