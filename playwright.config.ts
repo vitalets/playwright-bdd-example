@@ -8,16 +8,10 @@ const testDir = defineBddConfig({
 
 export default defineConfig({
   testDir,
-  reporter: [
-    cucumberReporter("html", {
-      outputFile: "cucumber-report/index.html",
-      externalAttachments: true,
-      attachmentsBaseURL: "http://127.0.0.1:8080/data",
-    }),
-    ["html", { open: "never" }],
-  ],
+  reporter: [["allure-playwright"], ["html", { open: "never" }]],
   use: {
     screenshot: "on",
+    video: "on",
     trace: "on",
   },
   projects: [
