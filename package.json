@@ -9,7 +9,7 @@
     "report": "npx http-server ./cucumber-report -c-1 -o index.html"
   },
   "devDependencies": {
-    "@playwright/test": "1.47.2",
+    "@playwright/test": "^1.49.1",
     "@types/node": "^20.9.4",
     "http-server": "14.1.1",
     "nodemon": "3.1.7",
