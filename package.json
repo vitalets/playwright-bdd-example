@@ -15,6 +15,8 @@
     "nodemon": "^3.1.9",
     "npm-run-all": "^4.1.5",
     "playwright-bdd": "^8.0.1",
+    "prettier": "3.4.2",
+    "prettier-plugin-gherkin": "^3.1.1",
     "typescript": "^5.7.2"
   }
 }
