@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "scripts": {
     "test": "npx bddgen && npx playwright test",
-    "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"npx bddgen\"",
-    "watch:pw": "playwright test --ui",
-    "watch": "run-p watch:*",
-    "report": "npx http-server ./cucumber-report -c-1 -o index.html"
+    "test:sauce": "npx bddgen && saucectl run"
   },
   "devDependencies": {
-    "@playwright/test": "^1.49.1",
+    "@playwright/test": "1.49.0",
     "@types/node": "^20.9.4",
     "http-server": "14.1.1",
     "nodemon": "^3.1.9",

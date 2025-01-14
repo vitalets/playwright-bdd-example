@@ -1,0 +1,24 @@
+apiVersion: v1alpha
+kind: playwright
+sauce:
+  region: us-west-1
+  concurrency: 10
+  metadata:
+    tags: [e2e, bdd]
+playwright:
+  version: package.json
+npm:
+  packages:
+    playwright-bdd: latest
+rootDir: ./
+suites:
+  - name: 'Chromium Mac'
+    platformName: 'macOS 12'
+    screenResolution: '1440x900'
+    testMatch: ['.*.js']
+    params:
+      browserName: 'chromium'
+      project: 'chromium'
+reporters:
+  spotlight:
+    enabled: true
