@@ -11,10 +11,9 @@ export default defineConfig({
   reporter: [
     cucumberReporter('html', {
       outputFile: 'cucumber-report/index.html',
-      externalAttachments: true,
-      attachmentsBaseURL: 'http://127.0.0.1:8080/data',
     }),
     ['html', { open: 'never' }],
+    ['list'],
   ],
   use: {
     screenshot: 'on',
@@ -24,6 +23,10 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
     },
   ],
 });
