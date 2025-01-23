@@ -16,4 +16,5 @@ cucumber-report
 **/.features-gen/**/*.spec.js
 
 .nx
-/update.sh
+/log
+/browserstack.yml

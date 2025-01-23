@@ -1,0 +1,29 @@
+userName: YOUR_USERNAME
+accessKey: YOUR_ACCESS_KEY
+
+projectName: playwright-bdd sample
+buildName: my-build-name
+# `buildIdentifier` is a unique id to differentiate every execution that gets appended to
+# buildName. Choose your buildIdentifier format from the available expressions:
+# ${BUILD_NUMBER} (Default): Generates an incremental counter with every execution
+# ${DATE_TIME}: Generates a Timestamp with every execution. Eg. 05-Nov-19:30
+# Read more about buildIdentifiers here -> https://www.browserstack.com/docs/automate/selenium/organize-tests
+buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${expression}
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+    playwrightConfigOptions:
+      name: chromium
+  - os: OS X
+    osVersion: Ventura
+    browserName: playwright-webkit
+    browserVersion: latest
+    playwrightConfigOptions:
+      name: osx
+  # - deviceName: Samsung Galaxy S23 Ultra
+  #   browserName: chrome
+  #   osVersion: 13.0
+  #   playwrightConfigOptions:
+  #     name: samsung

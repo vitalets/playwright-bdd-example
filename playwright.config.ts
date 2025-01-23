@@ -11,8 +11,6 @@ export default defineConfig({
   reporter: [
     cucumberReporter('html', {
       outputFile: 'cucumber-report/index.html',
-      externalAttachments: true,
-      attachmentsBaseURL: 'http://127.0.0.1:8080/data',
     }),
     ['html', { open: 'never' }],
   ],
@@ -20,10 +18,5 @@ export default defineConfig({
     screenshot: 'on',
     trace: 'on',
   },
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-  ],
+  // no projects here, see browserstack.yml
 });
