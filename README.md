@@ -2,13 +2,16 @@
 
 Example project that uses [playwright-bdd](https://github.com/vitalets/playwright-bdd) to run BDD tests.
 
+> [!IMPORTANT]
+> If you are using [Yarn Plug'n'Play](https://yarnpkg.com/features/pnp), please check out [yarn-pnp](https://github.com/vitalets/playwright-bdd-example/tree/yarn-pnp) branch. 
+
 ## How to report a bug
 
 1. [Fork](https://github.com/vitalets/playwright-bdd-example/fork) the repo!
 2. Clone it to your local machine
 
    ```
-   git clone https://github.com/<%your github username%>/playwright-bdd-example.git
+   git clone https://github.com/YOUR_GITHUB_USERNAME/playwright-bdd-example.git
    ```
 
 3. Change directory to `playwright-bdd-example`
