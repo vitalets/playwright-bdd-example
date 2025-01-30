@@ -6,6 +6,15 @@
 node_modules
 npm-debug.log
 
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # env
 .env
 

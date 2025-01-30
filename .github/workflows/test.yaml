@@ -11,9 +11,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npm test
+      - run: yarn
+      - run: yarn playwright install --with-deps
+      - run: yarn test
       - uses: actions/upload-artifact@v3
         if: always()
         with:
