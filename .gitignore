@@ -6,6 +6,10 @@
 node_modules
 npm-debug.log
 
+# yarn
+.pnp.*
+.yarn
+
 # env
 .env
 
