@@ -11,7 +11,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: yarn
+          cache: 'yarn'
+      - run: corepack enable          
+      - run: yarn install --immutable
       - run: yarn playwright install --with-deps
       - run: yarn test
       - uses: actions/upload-artifact@v3
