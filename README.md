@@ -1,6 +1,6 @@
 # playwright-bdd-example
 
-Example project that uses [playwright-bdd](https://github.com/vitalets/playwright-bdd) to run BDD tests.
+Example project that uses [Playwright-BDD](https://github.com/vitalets/playwright-bdd) with [Yarn Plug'n'Play](https://yarnpkg.com/features/pnp).
 
 ## How to report a bug
 
@@ -8,7 +8,7 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
 2. Clone it to your local machine
 
    ```
-   git clone https://github.com/<%your github username%>/playwright-bdd-example.git
+   git clone https://github.com/YOUR_GITHUB_USERNAME/playwright-bdd-example.git
    ```
 
 3. Change directory to `playwright-bdd-example`
@@ -20,19 +20,19 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
 4. Install dependencies
 
    ```
-   npm install
+   yarn
    ```
 
 5. Install browsers
 
    ```
-   npx playwright install
+   yarn playwright install
    ```
 
 6. Run tests
 
    ```
-   npm test
+   yarn test
    ```
 
    Output:
@@ -50,4 +50,4 @@ Example project that uses [playwright-bdd](https://github.com/vitalets/playwrigh
    git commit -m'repro for playwright-bdd issue xxx'
    git push
    ```
-9. [Open a pull-request](https://github.com/vitalets/playwright-bdd-example/pulls) and share the link
+9. [Open a pull-request](https://github.com/vitalets/playwright-bdd-example/pulls) and share the link to your repo.
