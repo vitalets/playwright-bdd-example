@@ -8,11 +8,17 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+
+      # Enable corepack for yarn. 
+      # Has to be run before actions/setup-node.
+      # See: https://github.com/actions/setup-node/issues/480
+      - run: corepack enable
+        
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          # cache: 'yarn'
-      - run: corepack enable # && corepack prepare yarn@stable --activate          
+          cache: 'yarn'
+
       - run: yarn install --immutable
       - run: yarn playwright install --with-deps
       - run: yarn test
