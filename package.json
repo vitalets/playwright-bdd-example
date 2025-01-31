@@ -2,11 +2,11 @@
   "name": "playwright-bdd-example",
   "version": "0.1.0",
   "scripts": {
-    "test": "npx bddgen && npx playwright test",
-    "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"npx bddgen\"",
+    "test": "yarn bddgen && yarn playwright test",
+    "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"yarn bddgen\"",
     "watch:pw": "playwright test --ui",
     "watch": "run-p watch:*",
-    "report": "npx http-server ./cucumber-report -c-1 -o index.html"
+    "report": "yarn http-server ./cucumber-report -c-1 -o index.html"
   },
   "devDependencies": {
     "@playwright/test": "^1.50.0",
