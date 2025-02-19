@@ -1,5 +1,12 @@
+import 'dotenv/config';
 import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
+import { defineBddConfig } from 'playwright-bdd';
+import { CurrentsConfig, currentsReporter } from '@currents/playwright';
+
+const currentsConfig: CurrentsConfig = {
+  recordKey: process.env.CURRENTS_RECORD_KEY || '',
+  projectId: process.env.CURRENTS_PROJECT_ID || '',
+};
 
 const testDir = defineBddConfig({
   features: 'features/*.feature',
@@ -8,14 +15,7 @@ const testDir = defineBddConfig({
 
 export default defineConfig({
   testDir,
-  reporter: [
-    cucumberReporter('html', {
-      outputFile: 'cucumber-report/index.html',
-      externalAttachments: true,
-      attachmentsBaseURL: 'http://127.0.0.1:8080/data',
-    }),
-    ['html', { open: 'never' }],
-  ],
+  reporter: [currentsReporter(currentsConfig)],
   use: {
     screenshot: 'on',
     trace: 'on',
