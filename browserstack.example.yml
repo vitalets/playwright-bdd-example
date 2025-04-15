@@ -9,6 +9,7 @@ buildName: my-build-name
 # ${DATE_TIME}: Generates a Timestamp with every execution. Eg. 05-Nov-19:30
 # Read more about buildIdentifiers here -> https://www.browserstack.com/docs/automate/selenium/organize-tests
 buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${expression}
+disableAutoCaptureLogs: true
 platforms:
   - os: Windows
     osVersion: 11
