@@ -8,6 +8,7 @@ const testDir = defineBddConfig({
 
 export default defineConfig({
   testDir,
+  respectGitIgnore: false,
   reporter: [
     cucumberReporter('html', {
       outputFile: 'cucumber-report/index.html',
