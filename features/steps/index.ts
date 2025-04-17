@@ -3,6 +3,7 @@ import { Given, When, Then } from './fixtures';
 
 Given('I am on Playwright home page', async ({ page }) => {
   await page.goto('https://playwright.dev');
+  await page.waitForTimeout(2000);
 });
 
 When('I click link {string}', async ({ page }, name: string) => {
