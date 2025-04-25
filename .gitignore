@@ -24,3 +24,4 @@ cucumber-report
 build-archive.log
 /browserstack.yml
 /log
+/allure-results
