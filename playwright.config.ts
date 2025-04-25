@@ -14,6 +14,7 @@ export default defineConfig({
       externalAttachments: true,
     }),
     ['html', { open: 'never' }],
+    ['allure-playwright']
   ],
   use: {
     screenshot: 'on',

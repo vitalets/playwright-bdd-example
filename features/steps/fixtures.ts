@@ -8,4 +8,4 @@ export const test = base.extend<Fixtures>({
   // add your fixtures
 });
 
-export const { Given, When, Then } = createBdd(test);
+export const { Given, When, Then, Before } = createBdd(test);

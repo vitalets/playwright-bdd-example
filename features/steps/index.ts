@@ -1,5 +1,9 @@
 import { expect } from '@playwright/test';
-import { Given, When, Then } from './fixtures';
+import { Given, When, Then, Before } from './fixtures';
+
+Before(async () => {
+  console.log('Before hook');
+});
 
 Given('I am on Playwright home page', async ({ page }) => {
   await page.goto('https://playwright.dev');
