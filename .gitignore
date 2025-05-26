@@ -22,3 +22,6 @@ cucumber-report
 .nx
 
 build-archive.log
+/browserstack.yml
+/log
+/allure-results
