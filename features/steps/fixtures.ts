@@ -7,7 +7,7 @@ type Fixtures = {
 };
 
 export const test = base.extend<Fixtures>({
-  extendedPage: ({ page }, use) => use(new ExtendedPage(page)),
+  extendedPage: ({ page, $test }, use) => use(new ExtendedPage(page, $test as typeof test)),
 });
 
 export const { Given, When, Then } = createBdd(test);
