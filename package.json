@@ -17,7 +17,8 @@
     "playwright-bdd": "^8.3.0",
     "prettier": "3.4.2",
     "prettier-plugin-gherkin": "^3.1.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "@zohodesk/testinglibrary": "file:zohodesk-testinglibrary-3.1.5.tgz"
   },
   "license": "MIT"
 }

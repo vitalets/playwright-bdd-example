@@ -3,7 +3,9 @@ import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
   features: 'features/*.feature',
-  steps: 'features/steps/*.ts',
+  steps: ['features/steps/*.ts',
+    require.resolve("@zohodesk/testinglibrary/common_steps")
+  ],
 });
 
 export default defineConfig({
