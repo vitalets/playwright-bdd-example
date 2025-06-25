@@ -27,6 +27,8 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testDir: defineBddConfig({outputDir: "some_other_folder",  features: 'features/*.feature',
+        steps: 'features/steps/*.ts'}),
       use: { ...devices['Desktop Chrome'] },
     },
   ],
