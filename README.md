@@ -1,6 +1,6 @@
 # playwright-bdd-example
 
-Example project that uses [playwright-bdd](https://github.com/vitalets/playwright-bdd) to run BDD tests.
+A minimal example project that uses [playwright-bdd](https://github.com/vitalets/playwright-bdd) to run BDD tests with Playwright.
 
 > [!IMPORTANT]
 > If you are using [Yarn Plug'n'Play](https://yarnpkg.com/features/pnp), please check out [yarn-pnp](https://github.com/vitalets/playwright-bdd-example/tree/yarn-pnp) branch. 
