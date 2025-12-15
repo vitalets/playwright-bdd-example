@@ -1,9 +1,6 @@
 # playwright-bdd-example
 
-A minimal example project that uses [playwright-bdd](https://github.com/vitalets/playwright-bdd) to run BDD tests with Playwright.
-
-> [!IMPORTANT]
-> If you are using [Yarn Plug'n'Play](https://yarnpkg.com/features/pnp), please check out [yarn-pnp](https://github.com/vitalets/playwright-bdd-example/tree/yarn-pnp) branch. 
+Example project that uses [Playwright-BDD](https://github.com/vitalets/playwright-bdd) with [Yarn Plug'n'Play](https://yarnpkg.com/features/pnp).
 
 ## How to report a bug
 
@@ -23,19 +20,19 @@ A minimal example project that uses [playwright-bdd](https://github.com/vitalets
 4. Install dependencies
 
    ```
-   npm install
+   yarn
    ```
 
 5. Install browsers
 
    ```
-   npx playwright install
+   yarn playwright install
    ```
 
 6. Run tests
 
    ```
-   npm test
+   yarn test
    ```
 
    Output:
@@ -53,4 +50,4 @@ A minimal example project that uses [playwright-bdd](https://github.com/vitalets
    git commit -m'repro for playwright-bdd issue xxx'
    git push
    ```
-9. [Open a pull-request](https://github.com/vitalets/playwright-bdd-example/pulls) and share the link
+9. [Open a pull-request](https://github.com/vitalets/playwright-bdd-example/pulls) and share the link to your repo.

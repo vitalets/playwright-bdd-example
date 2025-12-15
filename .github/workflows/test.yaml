@@ -8,12 +8,20 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+
+      # Enable corepack for yarn. 
+      # Has to be run before actions/setup-node.
+      # See: https://github.com/actions/setup-node/issues/480
+      - run: corepack enable
+        
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
-      - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npm test
+          node-version: 20
+          cache: 'yarn'
+
+      - run: yarn install --immutable
+      - run: yarn playwright install --with-deps
+      - run: yarn test
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -21,5 +29,4 @@ jobs:
           path: |
             playwright-report/
             test-results/
-          retention-days: 1
-          if-no-files-found: ignore
+          retention-days: 10
