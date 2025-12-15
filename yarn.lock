@@ -21,43 +21,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cucumber/gherkin-streams@npm:5.0.1":
-  version: 5.0.1
-  resolution: "@cucumber/gherkin-streams@npm:5.0.1"
+"@cucumber/gherkin-utils@npm:^9.2.0":
+  version: 9.2.0
+  resolution: "@cucumber/gherkin-utils@npm:9.2.0"
   dependencies:
-    commander: "npm:9.1.0"
-    source-map-support: "npm:0.5.21"
-  peerDependencies:
-    "@cucumber/gherkin": ">=22.0.0"
-    "@cucumber/message-streams": ">=4.0.0"
-    "@cucumber/messages": ">=17.1.1"
-  bin:
-    gherkin-javascript: bin/gherkin
-  checksum: 10c0/37898fa97e73f9d6ca4da9a1eb9c4b147c1d40ceb9882cc4e608ecb5c64c133d36452bbcb17474b918744d4d579194197cf79dede06a84803c8873c64d92d64b
-  languageName: node
-  linkType: hard
-
-"@cucumber/gherkin-utils@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "@cucumber/gherkin-utils@npm:9.1.0"
-  dependencies:
-    "@cucumber/gherkin": "npm:^30.0.0"
+    "@cucumber/gherkin": "npm:^31.0.0"
     "@cucumber/messages": "npm:^27.0.0"
     "@teppeis/multimaps": "npm:3.0.0"
-    commander: "npm:12.1.0"
+    commander: "npm:13.1.0"
     source-map-support: "npm:^0.5.21"
   bin:
     gherkin-utils: bin/gherkin-utils
-  checksum: 10c0/4966e0b60a55f2f004c6b5f29640e7999366efc42fc11bc9670e959be963791eea2fac61e94e932a92090ed0c610736f615a15f9a8237d3965bfbc98d97120cd
-  languageName: node
-  linkType: hard
-
-"@cucumber/gherkin@npm:30.0.4, @cucumber/gherkin@npm:^30.0.0":
-  version: 30.0.4
-  resolution: "@cucumber/gherkin@npm:30.0.4"
-  dependencies:
-    "@cucumber/messages": "npm:>=19.1.4 <=26"
-  checksum: 10c0/e373d48bd744cecb45a91a220b7e55bd7e88669eb9518edda1a29fb156f411346c69a7661e595ce5ac97e80ab02d091255e253e39047f5bd15bb475d5449de3e
+  checksum: 10c0/4d9fcb3d1b7e729dd52b9cce99c763b52b6ae6c7372eb3bb6d993881d57985662ab5afa7b71a75de983c046e3b9f03a915d4c981af18d80f608d8edb8245b430
   languageName: node
   linkType: hard
 
@@ -70,24 +45,56 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cucumber/html-formatter@npm:^21.8.0":
-  version: 21.8.0
-  resolution: "@cucumber/html-formatter@npm:21.8.0"
-  peerDependencies:
-    "@cucumber/messages": ">=18"
-  checksum: 10c0/643db2a42aa908003fa9091d69132e10a15d0c8df94f59193193785fcd3cd002b47600b3f5d7ae5f6a01c51a36ec02bdad19633e6ebab9531f2faf48ca7d35c7
+"@cucumber/gherkin@npm:^31.0.0":
+  version: 31.0.0
+  resolution: "@cucumber/gherkin@npm:31.0.0"
+  dependencies:
+    "@cucumber/messages": "npm:>=19.1.4 <=26"
+  checksum: 10c0/aa9746f5055e2387130c923e858da8c71775630379a527d48fbeb2f3e6a5dce92185201e29389e55c72a99bf5563ce4397d7907272dac8f7953266b7b825c54a
   languageName: node
   linkType: hard
 
-"@cucumber/messages@npm:27.0.2":
-  version: 27.0.2
-  resolution: "@cucumber/messages@npm:27.0.2"
+"@cucumber/gherkin@npm:^32.1.2":
+  version: 32.2.0
+  resolution: "@cucumber/gherkin@npm:32.2.0"
+  dependencies:
+    "@cucumber/messages": "npm:>=19.1.4 <28"
+  checksum: 10c0/43794c59ad1a43b09637455bad18f010fcb76e0b62103102f39007d43c09419027ee652cba329cc3c4f3ba07595246f197e13f618e0f92cfa3111373e5a41073
+  languageName: node
+  linkType: hard
+
+"@cucumber/html-formatter@npm:^21.11.0":
+  version: 21.15.1
+  resolution: "@cucumber/html-formatter@npm:21.15.1"
+  peerDependencies:
+    "@cucumber/messages": ">=18"
+  checksum: 10c0/4dbab97fe05d777107893fd2e0850f169f0dd9fad95fef3433858d39abbd7dce02317c4fe64e2b0d219b325a727636381cc4dd44875aaf9a98f7a9aa3c900606
+  languageName: node
+  linkType: hard
+
+"@cucumber/junit-xml-formatter@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "@cucumber/junit-xml-formatter@npm:0.7.1"
+  dependencies:
+    "@cucumber/query": "npm:^13.0.2"
+    "@teppeis/multimaps": "npm:^3.0.0"
+    luxon: "npm:^3.5.0"
+    xmlbuilder: "npm:^15.1.1"
+  peerDependencies:
+    "@cucumber/messages": "*"
+  checksum: 10c0/78e19d309a37decbf3cf078edcde7bdad88c77e405a94f75caf171fa3ec7c4a4b6e13644ede357fecc3cfd2323afe930717666bf57c7cbe872eda45f7e379517
+  languageName: node
+  linkType: hard
+
+"@cucumber/messages@npm:>=19.1.4 <28, @cucumber/messages@npm:^27.2.0":
+  version: 27.2.0
+  resolution: "@cucumber/messages@npm:27.2.0"
   dependencies:
     "@types/uuid": "npm:10.0.0"
     class-transformer: "npm:0.5.1"
     reflect-metadata: "npm:0.2.2"
-    uuid: "npm:10.0.0"
-  checksum: 10c0/034b2b86155ccfd681d7886f037202f5f96785e2b29d72fb87f9a14f70ee2d216bd84693f0406e70c469f51407a25b91a3370ac05dd3a4e814c629b71467ebb5
+    uuid: "npm:11.0.5"
+  checksum: 10c0/6b21e99976f1463ee7dc1fe36d74844cae559f1cf45f53e3b62b6cc9c7b1ca191ad971c9c3899fef5de0d2421c5b369cc64c4b9254ed2690791b2ecce096caf0
   languageName: node
   linkType: hard
 
@@ -139,10 +146,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cucumber/tag-expressions@npm:6.1.1":
-  version: 6.1.1
-  resolution: "@cucumber/tag-expressions@npm:6.1.1"
-  checksum: 10c0/5899b7e29dee9aa445df8de1fa09e7f7db6de0d63b73994a41cfa6d64f1104239a3f978463c41016751ad13f70349dabcab1c88ed3f948d13cbb409ea5646f3b
+"@cucumber/query@npm:^13.0.2":
+  version: 13.6.0
+  resolution: "@cucumber/query@npm:13.6.0"
+  dependencies:
+    "@teppeis/multimaps": "npm:3.0.0"
+    lodash.sortby: "npm:^4.7.0"
+  peerDependencies:
+    "@cucumber/messages": "*"
+  checksum: 10c0/a8df203c590bdd2da3c86b10abbe7db0da0391e1920eeb742fad944c8b42e5af1d2f93f99443b8ae7949698b29c340558e9e2709d88bfc71767bafe049fc3141
+  languageName: node
+  linkType: hard
+
+"@cucumber/tag-expressions@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "@cucumber/tag-expressions@npm:6.2.0"
+  checksum: 10c0/bcfe3ea0c34f489603da66796513da8e7b62a4cb4032689acfea27c634455efd121b95ba0453b6f67b780b41fbc8dc5de210a7a7a9cdd8a671a0d6345df6829a
   languageName: node
   linkType: hard
 
@@ -225,18 +244,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:^1.50.0":
-  version: 1.50.0
-  resolution: "@playwright/test@npm:1.50.0"
+"@playwright/test@npm:^1.57.0":
+  version: 1.57.0
+  resolution: "@playwright/test@npm:1.57.0"
   dependencies:
-    playwright: "npm:1.50.0"
+    playwright: "npm:1.57.0"
   bin:
     playwright: cli.js
-  checksum: 10c0/70b46eab2a5c8b4accc1c8a29a0ea371b7b8f56b0d38509e5c06354ebc60dc262837e92cea727076aea5e1c32f31e215c02fbde977519a7e38488cfc48f0ba5c
+  checksum: 10c0/35ba4b28be72bf0a53e33dbb11c6cff848fb9a37f49e893ce63a90675b5291ec29a1ba82c8a3b043abaead129400f0589623e9ace2e6a1c8eaa409721ecc3774
   languageName: node
   linkType: hard
 
-"@teppeis/multimaps@npm:3.0.0":
+"@teppeis/multimaps@npm:3.0.0, @teppeis/multimaps@npm:^3.0.0":
   version: 3.0.0
   resolution: "@teppeis/multimaps@npm:3.0.0"
   checksum: 10c0/7012b1faec5a6f76288db71ea71754e73714931e72da5717ca0285e6eae4e2c98df3044039f2d32008bca705f4c4fc866e5455eab7002eae68ed664aedc17604
@@ -595,21 +614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:12.1.0":
-  version: 12.1.0
-  resolution: "commander@npm:12.1.0"
-  checksum: 10c0/6e1996680c083b3b897bfc1cfe1c58dfbcd9842fd43e1aaf8a795fbc237f65efcc860a3ef457b318e73f29a4f4a28f6403c3d653d021d960e4632dd45bde54a9
-  languageName: node
-  linkType: hard
-
-"commander@npm:9.1.0":
-  version: 9.1.0
-  resolution: "commander@npm:9.1.0"
-  checksum: 10c0/401daebdfa3cab85b62090a88ed6b9fb4519163afb9247336010e4346970597566c07a832bb84f5c4af68d256b90d01ed7f6984366e6d232d356c533526019b5
-  languageName: node
-  linkType: hard
-
-"commander@npm:^13.1.0":
+"commander@npm:13.1.0, commander@npm:^13.1.0":
   version: 13.1.0
   resolution: "commander@npm:13.1.0"
   checksum: 10c0/7b8c5544bba704fbe84b7cab2e043df8586d5c114a4c5b607f83ae5060708940ed0b5bd5838cf8ce27539cde265c1cbd59ce3c8c6b017ed3eec8943e3a415164
@@ -1645,6 +1650,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.sortby@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "lodash.sortby@npm:4.7.0"
+  checksum: 10c0/fc48fb54ff7669f33bb32997cab9460757ee99fafaf72400b261c3e10fde21538e47d8cfcbe6a25a31bcb5b7b727c27d52626386fc2de24eb059a6d64a89cdf5
+  languageName: node
+  linkType: hard
+
 "lodash@npm:^4.17.14":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
@@ -1656,6 +1668,13 @@ __metadata:
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
   checksum: 10c0/ebd04fbca961e6c1d6c0af3799adcc966a1babe798f685bb84e6599266599cd95d94630b10262f5424539bc4640107e8a33aa28585374abf561d30d16f4b39fb
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^3.5.0":
+  version: 3.7.2
+  resolution: "luxon@npm:3.7.2"
+  checksum: 10c0/ed8f0f637826c08c343a29dd478b00628be93bba6f068417b1d8896b61cb61c6deacbe1df1e057dbd9298334044afa150f9aaabbeb3181418ac8520acfdc2ae2
   languageName: node
   linkType: hard
 
@@ -1709,19 +1728,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime-db@npm:1.52.0":
-  version: 1.52.0
-  resolution: "mime-db@npm:1.52.0"
-  checksum: 10c0/0557a01deebf45ac5f5777fe7740b2a5c309c6d62d40ceab4e23da9f821899ce7a900b7ac8157d4548ddbb7beffe9abc621250e6d182b0397ec7f10c7b91a5aa
+"mime-db@npm:^1.54.0":
+  version: 1.54.0
+  resolution: "mime-db@npm:1.54.0"
+  checksum: 10c0/8d907917bc2a90fa2df842cdf5dfeaf509adc15fe0531e07bb2f6ab15992416479015828d6a74200041c492e42cce3ebf78e5ce714388a0a538ea9c53eece284
   languageName: node
   linkType: hard
 
-"mime-types@npm:2.1.35":
-  version: 2.1.35
-  resolution: "mime-types@npm:2.1.35"
+"mime-types@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "mime-types@npm:3.0.2"
   dependencies:
-    mime-db: "npm:1.52.0"
-  checksum: 10c0/82fb07ec56d8ff1fc999a84f2f217aa46cb6ed1033fefaabd5785b9a974ed225c90dc72fff460259e66b95b73648596dbcc50d51ed69cdf464af2d237d3149b2
+    mime-db: "npm:^1.54.0"
+  checksum: 10c0/35a0dd1035d14d185664f346efcdb72e93ef7a9b6e9ae808bd1f6358227010267fab52657b37562c80fc888ff76becb2b2938deb5e730818b7983bf8bd359767
   languageName: node
   linkType: hard
 
@@ -2107,39 +2126,39 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "playwright-bdd-example@workspace:."
   dependencies:
-    "@playwright/test": "npm:^1.50.0"
+    "@playwright/test": "npm:^1.57.0"
     "@types/node": "npm:^20.9.4"
     http-server: "npm:14.1.1"
     nodemon: "npm:^3.1.9"
     npm-run-all: "npm:^4.1.5"
-    playwright-bdd: "npm:^8.1.0"
+    playwright-bdd: "npm:^8.4.2"
     prettier: "npm:3.4.2"
     prettier-plugin-gherkin: "npm:^3.1.1"
     typescript: "npm:^5.7.2"
   languageName: unknown
   linkType: soft
 
-"playwright-bdd@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "playwright-bdd@npm:8.1.0"
+"playwright-bdd@npm:^8.4.2":
+  version: 8.4.2
+  resolution: "playwright-bdd@npm:8.4.2"
   dependencies:
     "@cucumber/cucumber-expressions": "npm:18.0.1"
-    "@cucumber/gherkin": "npm:30.0.4"
-    "@cucumber/gherkin-streams": "npm:5.0.1"
-    "@cucumber/gherkin-utils": "npm:^9.1.0"
-    "@cucumber/html-formatter": "npm:^21.8.0"
-    "@cucumber/messages": "npm:27.0.2"
-    "@cucumber/tag-expressions": "npm:6.1.1"
+    "@cucumber/gherkin": "npm:^32.1.2"
+    "@cucumber/gherkin-utils": "npm:^9.2.0"
+    "@cucumber/html-formatter": "npm:^21.11.0"
+    "@cucumber/junit-xml-formatter": "npm:^0.7.1"
+    "@cucumber/messages": "npm:^27.2.0"
+    "@cucumber/tag-expressions": "npm:^6.2.0"
     cli-table3: "npm:0.6.5"
     commander: "npm:^13.1.0"
     fast-glob: "npm:^3.3.3"
-    mime-types: "npm:2.1.35"
+    mime-types: "npm:^3.0.2"
     xmlbuilder: "npm:15.1.1"
   peerDependencies:
-    "@playwright/test": ">=1.41"
+    "@playwright/test": ">=1.44"
   bin:
     bddgen: dist/cli/index.js
-  checksum: 10c0/49589adddbcff483649996133af1c5a450e6e8a2eb775e39c9fff1408e0280b2b9b5cb91f9e20bffa35c40bae5d7162771be86359557c823afdb0d7680e3c675
+  checksum: 10c0/47ba8ebcca8232479919a6531ee3f0ad2988483b1746cd17f93843b6294069559d3f908127d717176b692afa0e4e436d32bbae9e493995cdc0529dcd935b9ac6
   languageName: node
   linkType: hard
 
@@ -2152,7 +2171,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:*, playwright@npm:1.50.0":
+"playwright-core@npm:1.57.0":
+  version: 1.57.0
+  resolution: "playwright-core@npm:1.57.0"
+  bin:
+    playwright-core: cli.js
+  checksum: 10c0/798e35d83bf48419a8c73de20bb94d68be5dde68de23f95d80a0ebe401e3b83e29e3e84aea7894d67fa6c79d2d3d40cc5bcde3e166f657ce50987aaa2421b6a9
+  languageName: node
+  linkType: hard
+
+"playwright@npm:*":
   version: 1.50.0
   resolution: "playwright@npm:1.50.0"
   dependencies:
@@ -2164,6 +2192,21 @@ __metadata:
   bin:
     playwright: cli.js
   checksum: 10c0/0076a536433819b7122066a07c5fcfa56d40d09cbbec0a39061bbfa832c8a1f626df5e4fe206fbeba56b3a61f0e2b26d4ad3c2b402852d6f147a266fd18e4ddf
+  languageName: node
+  linkType: hard
+
+"playwright@npm:1.57.0":
+  version: 1.57.0
+  resolution: "playwright@npm:1.57.0"
+  dependencies:
+    fsevents: "npm:2.3.2"
+    playwright-core: "npm:1.57.0"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 10c0/ab03c99a67b835bdea9059f516ad3b6e42c21025f9adaa161a4ef6bc7ca716dcba476d287140bb240d06126eb23f889a8933b8f5f1f1a56b80659d92d1358899
   languageName: node
   linkType: hard
 
@@ -2635,7 +2678,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.21":
+"source-map-support@npm:^0.5.21":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -3159,7 +3202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmlbuilder@npm:15.1.1":
+"xmlbuilder@npm:15.1.1, xmlbuilder@npm:^15.1.1":
   version: 15.1.1
   resolution: "xmlbuilder@npm:15.1.1"
   checksum: 10c0/665266a8916498ff8d82b3d46d3993913477a254b98149ff7cff060d9b7cc0db7cf5a3dae99aed92355254a808c0e2e3ec74ad1b04aa1061bdb8dfbea26c18b8
