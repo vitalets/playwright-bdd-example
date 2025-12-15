@@ -26,3 +26,4 @@ cucumber-report
 
 .nx
 /update.sh
+/browserstack.yml
