@@ -1,7 +1,7 @@
 {
   "name": "playwright-bdd-example",
   "version": "0.1.0",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@3.4.1",
   "scripts": {
     "test": "yarn bddgen && yarn playwright test",
     "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"yarn bddgen\"",
