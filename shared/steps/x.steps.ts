@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { Given, When, Then } from './fixtures';
+import { Given, When, Then } from '../fixtures';
 
 Given('I am on Playwright home page', async ({ page }) => {
   await page.goto('https://playwright.dev');

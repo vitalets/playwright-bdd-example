@@ -1,9 +1,13 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
+import path from 'path';
 
 const testDir = defineBddConfig({
   features: 'features/*.feature',
-  steps: 'features/steps/*.ts',
+  steps: [
+    path.join(__dirname, '../shared/steps/**/*.steps.ts'),
+    '../shared/fixtures.ts'
+  ],
 });
 
 export default defineConfig({
