@@ -9,7 +9,7 @@
     "watch": "run-p watch:*"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^20.9.4",
     "http-server": "14.1.1",
     "nodemon": "^3.1.14",
