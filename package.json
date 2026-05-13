@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "scripts": {
     "test": "npx bddgen && npx playwright test",
+    "test:web": "npx bddgen && npx playwright test --project=web-chromium",
+    "test:api": "npx bddgen && npx playwright test --project=api",
+    "test:mobile:android": "npx bddgen && npx playwright test --project=mobile-android",
+    "test:mobile:ios": "npx bddgen && npx playwright test --project=mobile-ios",
     "report": "npx http-server ./cucumber-report -c-1 -a localhost -o index.html",
     "watch:bdd": "nodemon -w ./features -e feature,js,ts --exec \"npx bddgen\"",
     "watch:pw": "playwright test --ui",
@@ -11,13 +15,16 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^20.9.4",
+    "@wdio/types": "^9.0.0",
+    "dotenv": "^16.4.5",
     "http-server": "14.1.1",
     "nodemon": "^3.1.14",
     "npm-run-all": "^4.1.5",
     "playwright-bdd": "^8.5.1",
     "prettier": "^3.8.1",
     "prettier-plugin-gherkin": "^3.1.3",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "webdriverio": "^9.0.0"
   },
   "prettier": {
     "tabWidth": 2,
