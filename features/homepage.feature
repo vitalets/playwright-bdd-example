@@ -1,6 +1,13 @@
 Feature: Playwright Home Page
 
-  Scenario: Check title
-    Given I am on Playwright home page
-    When I click link "Get started"
-    Then I see in title "Installation"
+  Scenario: A two-parameter action step
+    When Actor does action "foo" on "bar" site
+
+  Scenario: A zero-parameter verification step
+    Then User verifies something visible
+
+
+# Scenario: A two-parameter action step with a table
+#   When Actor does action "foo" on "bar" site
+#     | option | value |
+#     | env    | demo  |
