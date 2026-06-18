@@ -21,7 +21,11 @@ cucumber-report
 
 .nx
 
+# vite
+dist
+
 build-archive.log
 /browserstack.yml
 /log
 /allure-results
+.claude/settings.local.json

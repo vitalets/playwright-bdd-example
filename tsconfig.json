@@ -2,8 +2,10 @@
   "compilerOptions": {
     "target": "es2021",
     "module": "nodenext",
+    "jsx": "react-jsx",
+    "lib": ["es2021", "dom", "dom.iterable"],
     "strict": true,
     "noEmit": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts"]
 }

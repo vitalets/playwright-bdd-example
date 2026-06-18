@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  border-bottom: 2px solid #333;
+}
+
+tbody tr:hover {
+  background: #f7f7f7;
+}
+
+td:first-child {
+  color: #888;
+}
+
+.error {
+  color: #c00;
+}
