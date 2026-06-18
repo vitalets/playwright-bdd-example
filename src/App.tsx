@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
-
-interface User {
-  id: number;
-  name: string;
-}
+import type { User } from './User';
+import UsersList from './UsersList';
+import UserInfo from './UserInfo';
 
 export default function App() {
   const [users, setUsers] = useState<User[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -16,26 +15,9 @@ export default function App() {
       .catch((err) => setError(err.message));
   }, []);
 
-  return (
-    <main>
-      <h1>Users</h1>
-      {error && <p className="error">Failed to load users: {error}</p>}
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => (
-            <tr key={user.id}>
-              <td>#{user.id}</td>
-              <td>{user.name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </main>
-  );
+  if (selectedUser) {
+    return <UserInfo user={selectedUser} onBack={() => setSelectedUser(null)} />;
+  }
+
+  return <UsersList users={users} error={error} onSelect={setSelectedUser} />;
 }

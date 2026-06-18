@@ -10,6 +10,10 @@ main {
   text-align: center;
 }
 
+h1 {
+  margin: 0 0 1rem;
+}
+
 table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -26,12 +30,32 @@ thead th {
   border-bottom: 2px solid #333;
 }
 
-tbody tr:hover {
+.users-table tbody tr:hover {
   background: #f7f7f7;
+}
+
+.users-table tbody tr {
+  cursor: pointer;
 }
 
 td:first-child {
   color: #888;
+}
+
+.back-button {
+  margin-top: 1.5rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #f0f0f0;
+  border-color: #999;
 }
 
 .error {

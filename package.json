@@ -2,14 +2,14 @@
   "name": "playwright-bdd-example",
   "version": "0.1.0",
   "scripts": {
+    "dev:bdd": "nodemon -w ./features -e feature,js,ts --exec \"npx bddgen\"",
+    "dev:vite": "vite --port 5050 --strictPort",
+    "dev": "run-p dev:*",
     "test": "npx bddgen && npx playwright test",
-    "report": "npx http-server ./cucumber-report -c-1 -a localhost -o index.html",
-    "watch:bdd": "nodemon -w ./features -e feature,js,ts --exec \"npx bddgen\"",
-    "watch:pw": "playwright test --ui",
-    "watch": "run-p watch:*",
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ui-mode": "npx playwright test --ui",
+    "report": "npx http-server ./cucumber-report -c-1 -a localhost -o index.html"
   },
   "dependencies": {
     "react": "^19.2.7",
