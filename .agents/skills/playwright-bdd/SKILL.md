@@ -19,6 +19,7 @@ Before writing or modifying any feature files, **ask the user** whether a BDD sp
    - Always show the target feature file path, so it's clear where the scenario will be added or modified.
    - If the user asks for a plan, do not finalize the plan until these feature-file changes have been shown and explicitly approved.
    - Do not substitute a summary, checklist, or implementation plan for the feature-file diff/Gherkin. The user must see the proposed `.feature` file update itself.
+   - Use a concise approval question such as: "Approve the proposed feature-file changes?"
    - If the user requests changes, revise the proposed scenario text and re-present it.
    - Iterate until the user explicitly approves the scenarios. Do not proceed to implementation planning or implementation until the user confirms the scenarios are correct.
 4. **Only after scenario approval, plan implementation** — Once the user approves the Gherkin, produce or execute the implementation plan as requested. The plan should reference the approved scenarios as the source of truth.
