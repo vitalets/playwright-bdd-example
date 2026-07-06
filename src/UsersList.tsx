@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { User } from './User';
 
 interface UsersListProps {
@@ -6,7 +7,16 @@ interface UsersListProps {
   onSelect: (user: User) => void;
 }
 
+const PAGE_SIZE = 5;
+
 export default function UsersList({ users, error, onSelect }: UsersListProps) {
+  const [page, setPage] = useState(0);
+  const pageCount = Math.ceil(users.length / PAGE_SIZE);
+  const firstUserIndex = page * PAGE_SIZE;
+  const visibleUsers = users.slice(firstUserIndex, firstUserIndex + PAGE_SIZE);
+  const isFirstPage = page === 0;
+  const isLastPage = page >= pageCount - 1;
+
   return (
     <main>
       <h1>Users</h1>
@@ -19,7 +29,7 @@ export default function UsersList({ users, error, onSelect }: UsersListProps) {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {visibleUsers.map((user) => (
             <tr key={user.id} data-testid="user-row" onClick={() => onSelect(user)}>
               <td>#{user.id}</td>
               <td>{user.name}</td>
@@ -27,6 +37,14 @@ export default function UsersList({ users, error, onSelect }: UsersListProps) {
           ))}
         </tbody>
       </table>
+      <div className="pagination">
+        <button type="button" disabled={isFirstPage} onClick={() => setPage((page) => page - 1)}>
+          Previous page
+        </button>
+        <button type="button" disabled={isLastPage} onClick={() => setPage((page) => page + 1)}>
+          Next page
+        </button>
+      </div>
     </main>
   );
 }
