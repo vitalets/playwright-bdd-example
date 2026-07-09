@@ -7,19 +7,19 @@ description: 'Enforces Behavior Driven Development. Use when: implementing new f
 
 ## Phase 0: BDD Necessity Check
 
-Before writing or modifying any feature files, **ask the user** whether a BDD spec is required for this change and wait for confirmation. When the runtime provides a dedicated user-question or clarification tool, use that tool for this gate instead of a plain text assistant reply. This tool may be named differently across agents or models, for example "Ask User Questions", `request_user_input`, "Clarification", or similar. If the user says no, skip the BDD workflow entirely.
+Before writing or modifying any feature files, **ask the user** whether a BDD spec is required for this change and wait for confirmation. If the user says no, skip the BDD workflow entirely.
 
 ## Phase 1: Planning
 
 1. **Discover project configuration** — Search `playwright.config.ts` (or `playwright.config.js`) for `defineBddConfig(...)` calls. This reveals the features directory and the `steps` glob patterns pointing to step definition files.
    - If multiple `defineBddConfig` calls exist, pick the most suitable one based on context (e.g. match directory names to the described feature area). Only ask the user to clarify if it is genuinely ambiguous.
 2. **Write BDD scenarios** — Check the existing feature files and create or update BDD scenarios according to the input. Strictly follow the "Scenario Writing Rules" section.
-3. **Present feature-file changes for approval before any implementation plan** — Show the exact new or changed Gherkin content to the user for negotiation:
+3. **Show feature-file changes to the user and use the question tool with the question "Approve the proposed feature-file changes?"** — Show the exact new or changed Gherkin content to the user for negotiation:
    - When presenting changes to existing scenarios, use unified diff format (```diff) to clearly show additions and removals. For entirely new scenarios, show them in plain Gherkin format.
    - Always show the target feature file path, so it's clear where the scenario will be added or modified.
+   - In the question tool use a concise approval question: "Approve the proposed feature-file changes?", don't show the full diff in the question itself.
    - If the user asks for a plan, do not finalize the plan until these feature-file changes have been shown and explicitly approved.
    - Do not substitute a summary, checklist, or implementation plan for the feature-file diff/Gherkin. The user must see the proposed `.feature` file update itself.
-   - Use a concise approval question such as: "Approve the proposed feature-file changes?"
    - If the user requests changes, revise the proposed scenario text and re-present it.
    - Iterate until the user explicitly approves the scenarios. Do not proceed to implementation planning or implementation until the user confirms the scenarios are correct.
 4. **Only after scenario approval, plan implementation** — Once the user approves the Gherkin, produce or execute the implementation plan as requested. The plan should reference the approved scenarios as the source of truth.
