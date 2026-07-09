@@ -7,7 +7,7 @@ description: 'Enforces Behavior Driven Development. Use when: implementing new f
 
 ## Phase 0: BDD Necessity Check
 
-Before writing or modifying any feature files, **ask the user** whether a BDD spec is required for this change and wait for confirmation. If the user says no, skip the BDD workflow entirely.
+Before writing or modifying any feature files, **ask the user** whether a BDD spec is required for this change and wait for confirmation. When the runtime provides a dedicated user-question or clarification tool, use that tool for this gate instead of a plain text assistant reply. This tool may be named differently across agents or models, for example "Ask User Questions", `request_user_input`, "Clarification", or similar. If the user says no, skip the BDD workflow entirely.
 
 ## Phase 1: Planning
 
