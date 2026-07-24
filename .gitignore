@@ -29,4 +29,6 @@ build-archive.log
 /log
 /allure-results
 .claude/settings.local.json
+
+# playwright-bdd
 **/.features-gen/**/*.spec.js
