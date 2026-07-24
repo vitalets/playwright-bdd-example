@@ -29,3 +29,4 @@ build-archive.log
 /log
 /allure-results
 .claude/settings.local.json
+**/.features-gen/**/*.spec.js
