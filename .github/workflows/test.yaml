@@ -13,7 +13,8 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npx playwright install --with-deps
-      - run: npm test
+      - run: npm install --no-save playwright-timeline-reporter
+      - run: npm test -- --add-reporter=playwright-timeline-reporter/markdown
       - uses: actions/upload-artifact@v7
         if: always()
         with:
